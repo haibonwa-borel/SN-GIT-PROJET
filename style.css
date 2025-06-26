@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+
+	height: 4rem;
+	display: flex;
+	flex-direction: row;
+	background: linear-gradient(to right, #0a0038, #006d6d);
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 	100%;
+	z-index: 1000;
+}
+
+.icon{
+	margin-left: 2vw ;	
+}
+
+.icon a{
+	color: white;
+	text-decoration: none;
+	font-weight: 450;
+    font-size: clamp(0.5rem, 1rem + 1vw, 1rem);
+}
+
+.ico{
+
+	width: 3rem;
+	height: 3rem;
+	border-radius: 2px;
+}
+.ico:hover{
+    box-shadow: 0 0 10px cyan;
+    transition: 0.3s linear;
+}
+
+.navigation{
+    font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
+	margin: 2rem 1rem;
+	display: flex;
+
+}
+
+.navigation a{
+
+	margin: 0 1rem ;
+	color: white;
+	text-shadow: 3px 3px 3px black;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.navigation a:hover,.icon span:hover, .contact .ss span:hover{
+	scale: 1.1;
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+section{
+	margin: 0;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.presentation{
+	background-color: #d3d3d3;
+	padding-bottom: 5rem;
+
+}
+
+.presentation h1{
+	margin-top: 10rem;
+	color: white;
+	text-shadow: 1px 1px 3px orange;
+	font-size: clamp(1rem, 1rem + 5vw, 12rem);
+	animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%,100%{
+        scale: 1;
+    }
+    25%{
+        transform: rotateX(90deg);
+    }
+    50%{
+    	text-shadow: 1px 1px 15px darkcyan;
+    	transform: rotateX(0deg);
+    }
+     75%{
+        transform: rotateX(90deg);
+    }
+
+}
+
+
+.presentation h2{
+
+	margin: 2rem 0;
+}
+
+.presentation .span{
+	justify-content: center;
+	text-align: center;
+	width: 50%;
+}
+
+.presentation span{
+	display: block;
+	width: 200px;
+	height: 5px;
+	background: blue;
+	border-radius: 10px;
+	position: absolute;
+	text-align: center;
+}
+
+.presentation input{
+    width: clamp(17rem, 25%, 30rem);
+    height: 3rem;
+    margin: 30px;
+    background: linear-gradient(to bottom, darkcyan, black);
+    color: white;
+    border: none;
+    outline: none;
+	font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+
+.presentation input:hover{
+    scale: 1.1;
+    color: #0a0038;
+    background: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px 5px cyan;
+}
+
+.about{
+	background:url("img/back2.jpeg") no-repeat;
+	background-size: cover;
+	backdrop-filter: brightness(50%);
+	height: auto;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	box-shadow: 0 -3px 5px #0099ff;
+}
+
+
+.about h1{
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+	color: white;
+	text-shadow: 0 0 7px cyan;
+	font-size: clamp(1rem, 1rem + 4vw, 12rem);
+	width: 100%;
+}
+
+
+.about .app{
+	padding: 2rem;
+	line-height: 1.3rem;
+	width: clamp(20rem, 1rem + 30vw, 400rem);
+	backdrop-filter: blur(10px);
+	margin: 1rem 5%;
+	border-radius: 7px;
+	box-shadow: 0 0 4px 3px lightblue;
+    transition: 0.5s linear;
+    font-size: 0.8rem;
+    text-align: justify;
+
+}
+
+.about .app:hover{
+
+	box-shadow: 0 0 10px 7px #0099ff;
+}
+
+.about .app h2{
+	margin-bottom: 1.5rem;
+	color: orange;
+	text-shadow: 0 0 3px black;
+	transition: 0.5s linear;
+	font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
+
+}
+
+.about .app h2:hover{
+	scale: 1.1;
+}
+
+.serv{
+	width: 100%;
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+
+}
+
+.serv h1{
+	padding-bottom: 5rem;
+	color: #dfedff;
+	text-shadow: 0 0 5px  black;
+	font-size: clamp(1rem, 1rem + 4vw, 12rem);
+	width: 100%;
+	text-align: center;
+}
+
+
+.serv .ss{
+	padding: 2rem;
+	width: 20%;
+	margin: 1rem;
+	background-color: darkgray;
+	border-radius: 1px;
+}
+
+
+.serv .ss h2{
+    font-size: clamp(1rem, 0.4rem + 1vw, 10rem);
+}
+
+.serv .ss i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border-radius: 50%;
+    color: #2a475e;
+    font-size: 1.9rem;
+    transition: 0.2s linear;
+}
+
+.serv .ss i:hover, .contact .ss i:hover{
+    scale: 1.1;
+    filter: drop-shadow(0 0 10px darkcyan);
+    color: black;
+    background-color: darkcyan;
+}
+
+
+.contact{
+	background: #2a475e;
+	padding: 5rem 2rem;
+	width: 100%;
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.contact h1{
+	padding-bottom: 5rem;
+	color: #030230;
+	text-shadow: 0 0 5px  cyan;
+	font-size: clamp(1rem, 1rem + 4vw, 12rem);
+	width: 100%;
+	text-align: center;
+}
+
+.contact .ss{
+	padding: 2rem;
+	width: 20%;
+	margin: 0.2rem;
+	background-color: transparent;
+	border-radius: 1px;
+	color: lightcyan;
+	font-size: 1vw;
+	justify-content: center;
+
+}
+
+.contact .ss i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border-radius: 50%;
+    color: orange;
+    font-size: 1.9rem;
+    transition: 0.2s linear;
+}
+.contact .ss span{
+	text-shadow: 3px 3px 3px black;
+	transition: 0.3s linear;
+
+}
+
+
+footer {
+  background-color: #191e22;
+  color: #6a6e71;
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+footer span {
+	margin-left: 0.5rem;
+	float: left;
+}
+
+footer a{
+	  color: darkgray;
+	text-shadow: 3px 3px 3px black;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
